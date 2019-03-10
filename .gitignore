@@ -1,0 +1,5 @@
+/node_modules/*
+/wwwroot/*
+/asyncdb/bin/*
+/asyncdb/obj/*
+/.vs/*

@@ -3,3 +3,7 @@
 /asyncdb/bin/*
 /asyncdb/obj/*
 /.vs/*
+/Domain/bin/*
+/Domain/obj/*
+/WebApp/bin/*
+/WebApp/obj/*

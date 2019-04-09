@@ -7,3 +7,5 @@
 /Domain/obj/*
 /WebApp/bin/*
 /WebApp/obj/*
+/Transcrypt.Domain/bin/*
+/Transcrypt.Domain/obj/*

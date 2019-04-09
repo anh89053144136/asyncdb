@@ -2,7 +2,7 @@
 
 namespace asyncdb
 {
-    public class DBFileMap : ClassMap<DBFile>
+    public class FileMap : ClassMap<DBFile>
     {
         public DBFileMap()
         {

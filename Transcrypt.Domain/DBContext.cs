@@ -13,25 +13,25 @@ namespace Transcrypt.Domain
 {
     public class DBContext
     {
-        //private static ISessionFactory _sessionFactory;
+        private static ISessionFactory _sessionFactory;
 
-        //static DBContext()
-        //{
-        //    var builder = new ConfigurationBuilder()
-        //    .SetBasePath(Directory.GetCurrentDirectory())
-        //    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+        static DBContext()
+        {
+            var builder = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-        //    IConfigurationRoot configuration = builder.Build();
+            IConfigurationRoot configuration = builder.Build();
 
-        //    string connectionString = configuration.GetConnectionString("Storage");
+            string connectionString = configuration.GetConnectionString("Storage");
 
-        //    _sessionFactory = Fluently.Configure()
-        //     .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connectionString))
-        //     .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHibernate.Cfg.Mappings>())
-        //     .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DBContext>())
-        //     .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true))
-        //     .BuildSessionFactory();
-        //}
+            _sessionFactory = Fluently.Configure()
+             .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connectionString))
+             .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHibernate.Cfg.Mappings>())
+             .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DBContext>())
+             .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true))
+             .BuildSessionFactory();
+        }
 
         //public IQueryable<InternalDocflowPackage> 
     }

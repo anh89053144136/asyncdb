@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Taxnet.Transcrypt.Repositories.Linq2Db.Model
+namespace Transcrypt.Domain.Entities
 {
     public class ApprovalPackage
     {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace asyncdb
 {
-    public  class File
+    public  class DBFile
     {
         public virtual int Id { set; get; }
         public virtual string Name { set; get; }

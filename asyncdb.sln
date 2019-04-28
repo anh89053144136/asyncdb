@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28809.33
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asyncdb", "asyncdb\asyncdb.csproj", "{E04030AD-3CB6-4274-AFC4-D60B9CB09EA6}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{19DD873D-5D26-4FA4-A650-50DEC45B2DBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transcrypt.Domain", "Transcrypt.Domain\Transcrypt.Domain.csproj", "{57775638-2EB3-4578-AC04-F38B6210CD07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transcrypt.Domain", "Transcrypt.Domain\Transcrypt.Domain.csproj", "{57775638-2EB3-4578-AC04-F38B6210CD07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transcrypt.Incoming", "Transcrypt.Incoming\Transcrypt.Incoming.csproj", "{AB0DF503-2D36-45BA-B1A0-13EFFE0BD7CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{57775638-2EB3-4578-AC04-F38B6210CD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57775638-2EB3-4578-AC04-F38B6210CD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57775638-2EB3-4578-AC04-F38B6210CD07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0DF503-2D36-45BA-B1A0-13EFFE0BD7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0DF503-2D36-45BA-B1A0-13EFFE0BD7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0DF503-2D36-45BA-B1A0-13EFFE0BD7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0DF503-2D36-45BA-B1A0-13EFFE0BD7CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

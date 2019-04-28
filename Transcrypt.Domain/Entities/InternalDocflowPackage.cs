@@ -1,6 +1,6 @@
 using System;
 
-namespace Taxnet.Transcrypt.Repositories.Linq2Db.Model
+namespace Transcrypt.Domain.Entities
 {
     public class InternalDocflowPackage
     {

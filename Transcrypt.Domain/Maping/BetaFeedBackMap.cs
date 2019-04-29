@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("BetaFeedBacks");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.Comment);
             Map(x => x.Choice);

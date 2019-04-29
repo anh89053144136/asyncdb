@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("Regions");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.Code);
             Map(x => x.Name);

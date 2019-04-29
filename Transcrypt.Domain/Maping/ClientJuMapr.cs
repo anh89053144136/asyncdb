@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("ClientJurs");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.FullName);
             Map(x => x.ShortName);

@@ -10,7 +10,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("ContactTransactions");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.PreviousState);
             Map(x => x.CurrentState);

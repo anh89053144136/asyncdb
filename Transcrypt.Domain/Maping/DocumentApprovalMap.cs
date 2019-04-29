@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("DocumentApprovals");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.ApprovalPackageId);
             Map(x => x.DraftId);

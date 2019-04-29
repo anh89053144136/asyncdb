@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("ClientNats");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.LastName);
             Map(x => x.FirstName);

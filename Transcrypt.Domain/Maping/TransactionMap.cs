@@ -10,7 +10,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("Transactions");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.DocumentId);
             Map(x => x.SenderId);
@@ -19,7 +19,6 @@ namespace Transcrypt.Domain.Entities
             Map(x => x.ReceiverIsOperator);
             Map(x => x.CreateDate);
             Map(x => x.ParentId);
-            Map(x => x.SenderIsOperator);
             Map(x => x.Code);
 
             References(x => x.Sender).Column("SenderId");

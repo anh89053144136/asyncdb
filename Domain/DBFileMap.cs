@@ -8,7 +8,7 @@ namespace asyncdb
         {
             Table("DBFiles");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.Name);
             Map(x => x.CreatedDate).Generated.Insert();

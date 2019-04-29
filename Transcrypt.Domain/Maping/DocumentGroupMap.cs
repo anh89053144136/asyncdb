@@ -10,7 +10,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("DocumentGroups");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.State);
             Map(x => x.CreateDateTime);

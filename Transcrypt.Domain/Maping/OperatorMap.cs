@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("Operators");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.DocflowUserId);
             Map(x => x.FullName);

@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("AuthSessions");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.DateLogin);
             Map(x => x.Login);

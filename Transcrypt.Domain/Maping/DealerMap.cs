@@ -8,7 +8,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("Dealers");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.OperatorId);
             Map(x => x.Name);

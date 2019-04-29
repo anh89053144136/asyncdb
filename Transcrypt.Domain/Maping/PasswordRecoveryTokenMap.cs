@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("PasswordRecoveryTokens");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.CreationDateTime);
             Map(x => x.ExpirationDateTime);

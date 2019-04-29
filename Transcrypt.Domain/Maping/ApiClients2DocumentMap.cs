@@ -7,7 +7,9 @@ namespace Transcrypt.Domain.Entities
     {
         public ApiClients2DocumentMap()
         {
-            Table("ApiClients2Documents");
+            Table("ApiClients2Document");
+
+            Id(x => new { x.DocumentId, x.SenderProgramInstanceId });
 
             Map(x => x.SenderProgramInstanceId);
             Map(x => x.DocumentId);

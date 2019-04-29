@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("TransactionForPostProcessings");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.IsProcessed);
             Map(x => x.DocumentId);

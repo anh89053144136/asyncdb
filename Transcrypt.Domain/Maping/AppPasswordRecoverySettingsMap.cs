@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("AppPasswordRecoverySettingss");
 
-            Id(x => x.AppId).GeneratedBy.Increment();
+            Id(x => x.AppId).GeneratedBy.Guid();
 
             Map(x => x.Host);
             Map(x => x.RecoveryPage);

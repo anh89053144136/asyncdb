@@ -8,7 +8,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("Signatures");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.Name);
             Map(x => x.ShortName);

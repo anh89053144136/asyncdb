@@ -8,7 +8,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("ApprovalPackages");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             References(x => x.InternalPackageDc).Column("Id");
         }

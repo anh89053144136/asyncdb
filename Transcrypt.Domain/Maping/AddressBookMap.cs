@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("AddressBooks");
 
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.ContactSender);
             Map(x => x.ContactReceiver);

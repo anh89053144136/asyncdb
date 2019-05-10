@@ -12,7 +12,6 @@ namespace Transcrypt.Domain.Entities
             Id(x => x.Guid);
 
             Map(x => x.Text);
-            Map(x => x.CountryId);
 
             References(x => x.Country).Column("CountryId");
         }

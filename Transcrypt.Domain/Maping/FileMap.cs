@@ -11,7 +11,6 @@ namespace Transcrypt.Domain.Entities
 
             Id(x => x.Id);
 
-            Map(x => x.TransactionId);
             Map(x => x.FileName);
             Map(x => x.Size);
             Map(x => x.Code);

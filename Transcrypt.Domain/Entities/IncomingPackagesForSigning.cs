@@ -4,8 +4,8 @@ namespace Transcrypt.Domain.Entities
 {
     public class IncomingPackagesForSigning
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public Guid DocumentId { get; set; }
+        public virtual Guid DocumentId { get; set; }
     }
 }

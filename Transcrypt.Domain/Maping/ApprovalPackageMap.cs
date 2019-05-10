@@ -10,7 +10,7 @@ namespace Transcrypt.Domain.Entities
 
             Id(x => x.Id).GeneratedBy.Guid();
 
-            References(x => x.InternalPackageDc).Column("Id");
+            //References(x => x.InternalPackageDc).Column("Id");
         }
     }
 }

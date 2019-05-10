@@ -25,7 +25,7 @@ namespace Transcrypt.Domain.Entities
             References(x => x.DraftGroup).Column("GroupId");
             References(x => x.SenderDepartment).Column("SenderDepartmentId");
             References(x => x.ReceiverDepartment).Column("ReceiverDepartmentId");
-            References(x => x.FileContent).Column("Id");
+            //References(x => x.FileContent).Column("Id");
         }
     }
 }

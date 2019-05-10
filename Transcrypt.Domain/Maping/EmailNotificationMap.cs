@@ -7,7 +7,7 @@ namespace Transcrypt.Domain.Entities
     {
         public EmailNotificationMap()
         {
-            Table("Signatures");
+            Table("EmailNotifications");
 
             Id(x => x.Id);
 

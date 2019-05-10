@@ -8,7 +8,7 @@ namespace Transcrypt.Domain.Entities
     {
         public DraftGroupMap()
         {
-            Table("Signatures");
+            Table("DraftGroups");
 
             Id(x => x.Id).GeneratedBy.Guid();
 

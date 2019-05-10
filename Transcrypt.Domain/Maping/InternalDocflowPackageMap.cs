@@ -7,11 +7,10 @@ namespace Transcrypt.Domain.Entities
     {
         public InternalDocflowPackageMap()
         {
-            Table("Signatures");
+            Table("InternalDocflowPackages");
 
             Id(x => x.Id);//.GeneratedBy.Guid();
 
-            Map(x => x.SenderId);
             Map(x => x.ReceiverId);
             Map(x => x.ReceiverDepartmentId);
             Map(x => x.ReceiverType);

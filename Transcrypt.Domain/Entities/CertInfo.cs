@@ -4,21 +4,21 @@ namespace Transcrypt.Domain.Entities
 {
     public class CertInfo
     {
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
 
-        public string CommonName { get; set; }
+        public virtual string CommonName { get; set; }
 
-        public DateTime? KeyDate { get; set; }
+        public virtual DateTime? KeyDate { get; set; }
 
-        public DateTime? ExpDate { get; set; }
+        public virtual DateTime? ExpDate { get; set; }
 
-        public string Snils { get; set; }
+        public virtual string Snils { get; set; }
 
-        public string Post { get; set; }
+        public virtual string Post { get; set; }
 
-        public string Fio { get; set; }
+        public virtual string Fio { get; set; }
         
         //[Association(ThisKey = "Id", OtherKey = "Id")]
-        public Cert Cert { get; set; }
+        public virtual Cert Cert { get; set; }
     }
 }

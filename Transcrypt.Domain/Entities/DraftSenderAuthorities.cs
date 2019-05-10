@@ -4,20 +4,20 @@ namespace Transcrypt.Domain.Entities
 {
     public class DraftSenderAuthorities
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public int Area { get; set; }
+        public virtual int Area { get; set; }
 
-        public int Status { get; set; }
+        public virtual int Status { get; set; }
 
-        public string BasisForOrganization { get; set; }
+        public virtual string BasisForOrganization { get; set; }
 
-        public string BasisForEmployee { get; set; }
+        public virtual string BasisForEmployee { get; set; }
 
-        public string Post { get; set; }
+        public virtual string Post { get; set; }
  
-        public string StateRegistrationCertificate { get; set; }
+        public virtual string StateRegistrationCertificate { get; set; }
 
-        public string OtherInformation { get; set; }
+        public virtual string OtherInformation { get; set; }
     }
 }

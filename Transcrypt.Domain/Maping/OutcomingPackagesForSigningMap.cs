@@ -7,12 +7,9 @@ namespace Transcrypt.Domain.Entities
     {
         public OutcomingPackagesForSigningMap()
         {
-            Table("Signatures");
+            Table("OutcomingPackagesForSignings");
 
             Id(x => x.Id).GeneratedBy.Guid();
-
-            Map(x => x.DocumentsGroupId);
-            Map(x => x.DraftsGroupId);
 
             References(x => x.DraftsGroup).Column("DraftsGroupId");
             References(x => x.DocumentsGroup).Column("DocumentsGroupId");

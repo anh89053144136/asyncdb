@@ -7,7 +7,7 @@ namespace Transcrypt.Domain.Entities
     {
         public InvoiceInfoMap()
         {
-            Table("Signatures");
+            Table("InvoiceInfos");
 
             Id(x => x.Id).GeneratedBy.Guid();
 

@@ -4,10 +4,10 @@ namespace Transcrypt.Domain.Entities
 {
     public class FileContent
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public byte[] Content { get; set; }
+        public virtual byte[] Content { get; set; }
 
-        public Guid? DataStorageId { get; set; }
+        public virtual Guid? DataStorageId { get; set; }
     }
 }

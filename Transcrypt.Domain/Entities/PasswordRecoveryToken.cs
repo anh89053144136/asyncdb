@@ -7,31 +7,31 @@ namespace Transcrypt.Domain.Entities
 		/// <summary>
 		/// Уникальный токен
 		/// </summary>
-		public Guid Id { get; set; }
+		public virtual Guid Id { get; set; }
 		
 		/// <summary>
 		/// Дата создания токена
 		/// </summary>
-		public DateTime CreationDateTime { get; set; }
+		public virtual DateTime CreationDateTime { get; set; }
 
 		/// <summary>
 		/// Дата истечения токена
 		/// </summary>
-		public DateTime ExpirationDateTime { get; set; }
+		public virtual DateTime ExpirationDateTime { get; set; }
 
 		/// <summary>
 		/// Признак того что токен использовался
 		/// </summary>
-		public int State { get; set; }
+		public virtual int State { get; set; }
 		
 		/// <summary>
 		/// Идентификатор приложения через которое был запрошен токен
 		/// </summary>
-		public Guid AppId { get; set; }
+		public virtual Guid AppId { get; set; }
 		
 		/// <summary>
 		/// Идентификатор пользователя для которого был запрошен токен
 		/// </summary>
-		public Guid UserId { get; set; }
+		public virtual Guid UserId { get; set; }
 	}
 }

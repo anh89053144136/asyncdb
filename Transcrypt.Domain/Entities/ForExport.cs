@@ -4,12 +4,12 @@ namespace Transcrypt.Domain.Entities
 {
 	public class ForExport
 	{
-		public Guid Id { get; set; }
+		public virtual Guid Id { get; set; }
 
-		public Guid TransactionId { get; set; }
+		public virtual Guid TransactionId { get; set; }
 
-		public int ClientType { get; set; }
+		public virtual int ClientType { get; set; }
 
-		public int Status { get; set; }
+		public virtual int Status { get; set; }
 	}
 }

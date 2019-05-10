@@ -4,19 +4,19 @@ namespace Transcrypt.Domain.Entities
 {
     public class Signature
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
                 
-        public Guid FileId { get; set; }
+        public virtual Guid FileId { get; set; }
         
-        public int? CertificateId { get; set; }
+        public virtual int? CertificateId { get; set; }
         
         //[Association(ThisKey = "FileId", OtherKey = "Id")]
-        public File File { get; set; }
+        public virtual File File { get; set; }
         
         //[Association(ThisKey = "CertificateId", OtherKey = "Id")]
-        public Cert Cert { get; set; }
+        public virtual Cert Cert { get; set; }
         
         //[Association(ThisKey = "Id", OtherKey = "Id")]
-        public FileContent FileContent { get; set; }
+        public virtual FileContent FileContent { get; set; }
     }
 }

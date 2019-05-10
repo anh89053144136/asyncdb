@@ -9,13 +9,15 @@ namespace Transcrypt.Domain.Entities
         {
             Table("EmployeeDocuments");
 
-            Map(x => x.DocumentId);
-            Map(x => x.EmployeeId);
+            CompositeId()
+              .KeyProperty(x => x.DocumentId)
+              .KeyProperty(x => x.EmployeeId);
+
             Map(x => x.IsImportant);
             Map(x => x.NotReaded);
 
-            References(x => x.Document).Column("DocumentId");
-            References(x => x.Employee).Column("EmployeeId");
+            //References(x => x.Document).Column("DocumentId");
+            //References(x => x.Employee).Column("EmployeeId");
             //References(x => x.FileContent).Column("DocumentId");
         }
     }

@@ -11,7 +11,6 @@ namespace Transcrypt.Domain.Entities
 
             Id(x => x.Id).GeneratedBy.Increment();
 
-            Map(x => x.OperatorId);
             Map(x => x.Name);
             Map(x => x.Value);
 

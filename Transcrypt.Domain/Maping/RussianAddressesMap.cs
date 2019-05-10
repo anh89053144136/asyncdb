@@ -7,12 +7,11 @@ namespace Transcrypt.Domain.Entities
     {
         public RussianAddressesMap()
         {
-            Table("Signatures");
+            Table("RussianAddresses");
 
             Id(x => x.Id).GeneratedBy.Guid();
 
             Map(x => x.PostIndex);
-            Map(x => x.RegionId);
             Map(x => x.Area);
             Map(x => x.City);
             Map(x => x.Settlement);

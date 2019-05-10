@@ -4,12 +4,12 @@ namespace Transcrypt.Domain.Entities
 {
     public class Region
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public string Code { get; set; }
+        public virtual string Code { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public string ShortName { get; set; }
+        public virtual string ShortName { get; set; }
     }
 }

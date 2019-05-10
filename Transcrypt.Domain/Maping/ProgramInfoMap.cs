@@ -7,7 +7,7 @@ namespace Transcrypt.Domain.Entities
     {
         public ProgramInfoMap()
         {
-            Table("Signatures");
+            Table("ProgramInfos");
 
             Id(x => x.Id).GeneratedBy.Guid();
 

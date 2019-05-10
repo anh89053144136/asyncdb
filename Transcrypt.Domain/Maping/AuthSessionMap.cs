@@ -16,7 +16,6 @@ namespace Transcrypt.Domain.Entities
             Map(x => x.CertHash);
             Map(x => x.Ip);
             Map(x => x.UserId);
-            Map(x => x.EmployeeId);
             Map(x => x.DateLastActive);
             Map(x => x.Status);
             Map(x => x.OperatorId);

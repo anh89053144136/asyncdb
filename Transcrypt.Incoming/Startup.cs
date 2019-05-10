@@ -21,7 +21,8 @@ namespace Transcrypt.Incoming
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+                //.AddJsonOptions(options => { options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore; });
+            
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

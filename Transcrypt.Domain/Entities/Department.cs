@@ -4,25 +4,25 @@ namespace Transcrypt.Domain.Entities
 {
     public class Department
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public Guid ClientId { get; set; }
+        public virtual Guid ClientId { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public string ShortName { get; set; }
+        public virtual string ShortName { get; set; }
 
-        public Guid? ParentId { get; set; }
+        public virtual Guid? ParentId { get; set; }
 
-        public string Kpp { get; set; }
+        public virtual string Kpp { get; set; }
 
         // TODO денормализовать адрес
-        public Guid? AddressId { get; set; }
+        public virtual Guid? AddressId { get; set; }
         
         //[Association(ThisKey = "ClientId", OtherKey = "Id")]
-        public Client Client { get; set; }
+        public virtual Client Client { get; set; }
         
         //[Association(ThisKey = "ParentId", OtherKey = "Id", CanBeNull = true)]
-        public Department Parent { get; set; }
+        public virtual Department Parent { get; set; }
     }
 }

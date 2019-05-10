@@ -8,18 +8,18 @@ namespace Transcrypt.Domain.Entities
         /// <summary>
 		/// Идентификатор
 		/// </summary>
-		public Guid Id { get; set; }
+		public virtual Guid Id { get; set; }
 
         /// <summary>
         /// Пакет внутреннего документооборота
         /// </summary>
         //[Association(ThisKey = "Id", OtherKey = "Id", CanBeNull = false)]
-        public InternalDocflowPackage InternalPackageDc { get; set; }
+        public virtual InternalDocflowPackage InternalPackageDc { get; set; }
 
         /// <summary>
         /// Согласования документов
         /// </summary>
         //[Association(ThisKey = "Id", OtherKey = "ApprovalPackageId")]
-        public IEnumerable<DocumentApproval> DocumentApprovals { get; set; }
+        public virtual IEnumerable<DocumentApproval> DocumentApprovals { get; set; }
     }
 }

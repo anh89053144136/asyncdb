@@ -4,11 +4,11 @@ namespace Transcrypt.Domain.Entities
 {
     public class ForeignAddresses
     {
-        public Guid Guid { get; set; }
-        public string Text { get; set; }
-        public Guid CountryId { get; set; }
+        public virtual Guid Guid { get; set; }
+        public virtual string Text { get; set; }
+        public virtual Guid CountryId { get; set; }
 
         //[Association(ThisKey = "CountryId", OtherKey = "Id")]
-        public Country Country { get; set; }
+        public virtual Country Country { get; set; }
     }
 }

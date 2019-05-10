@@ -4,31 +4,31 @@ namespace Transcrypt.Domain.Entities
 {
     public class AuthSession
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public DateTime DateLogin  {get;set;}
+        public virtual DateTime DateLogin  {get;set;}
 
-        public string Login {get;set;}
+        public virtual string Login {get;set;}
 
-        public string CertHash {get;set;}
+        public virtual string CertHash {get;set;}
 
-        public string Ip {get;set;}
+        public virtual string Ip {get;set;}
 
-        public Guid? UserId {get;set;}
+        public virtual Guid? UserId {get;set;}
 
-        public Guid? EmployeeId {get;set;}
+        public virtual Guid? EmployeeId {get;set;}
 
-        public DateTime DateLastActive {get;set;}
+        public virtual DateTime DateLastActive {get;set;}
 
-        public int Status {get;set;}
+        public virtual int Status {get;set;}
 
-        public Guid? OperatorId {get;set;}
+        public virtual Guid? OperatorId {get;set;}
 
-        public Guid? ProgramInstanceId {get;set;}
+        public virtual Guid? ProgramInstanceId {get;set;}
 
-        public Guid? ProgramInfoId {get;set;}
+        public virtual Guid? ProgramInfoId {get;set;}
         
         //[Association(ThisKey = "EmployeeId", OtherKey = "Id", CanBeNull = true)]
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

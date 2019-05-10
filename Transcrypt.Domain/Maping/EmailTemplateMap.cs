@@ -8,7 +8,8 @@ namespace Transcrypt.Domain.Entities
         {
             Table("EmailTemplates");
 
-            Map(x => x.EmailType);
+            Id(x => x.EmailType);
+
             Map(x => x.Message);
             Map(x => x.Subject);
         }

@@ -8,7 +8,8 @@ namespace Transcrypt.Domain.Entities
         {
             Table("Settings20");
 
-            Map(x => x.Name);
+            Id(x => x.Name);
+
             Map(x => x.Value);
         }
     }

@@ -4,16 +4,16 @@ namespace Transcrypt.Domain.Entities
 {
 	public class AppPasswordRecoverySettings
 	{
-		public Guid? AppId { get; set; } 
+		public virtual Guid? AppId { get; set; } 
 		
 		/// <summary>
 		/// Адрес хоста 
 		/// </summary>
-		public string Host { get; set; }
+		public virtual string Host { get; set; }
 
 		/// <summary>
 		/// Адрес страницы восстановления пароля 
 		/// </summary>
-		public string RecoveryPage { get; set; }
+		public virtual string RecoveryPage { get; set; }
 	}
 }

@@ -11,8 +11,6 @@ namespace Transcrypt.Domain.Entities
 
             Id(x => x.Id).GeneratedBy.Guid();
 
-            Map(x => x.FileId);
-
             References(x => x.File).Column("FileId");
             References(x => x.Cert).Column("CertificateId");
         }

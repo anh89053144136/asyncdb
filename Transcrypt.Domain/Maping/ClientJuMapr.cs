@@ -7,7 +7,7 @@ namespace Transcrypt.Domain.Entities
     {
         public ClientJurMap()
         {
-            Table("ClientJurs");
+            Table("ClientsJur");
 
             Id(x => x.Id).GeneratedBy.Guid();
 

@@ -4,32 +4,32 @@ namespace Transcrypt.Domain.Entities
 {
     public class ServicePackage
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public Guid ClientId { get; set; }
+        public virtual Guid ClientId { get; set; }
 
-        public int SendingsLimit { get; set; }
+        public virtual int SendingsLimit { get; set; }
 
-        public int TimeLimit { get; set; }
+        public virtual int TimeLimit { get; set; }
 
-        public int TimeLimitType { get; set; }
+        public virtual int TimeLimitType { get; set; }
 
-        public DateTime? ExpirationDate { get; set; }
+        public virtual DateTime? ExpirationDate { get; set; }
 
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
-        public DateTime? ActivationDate { get; set; }
+        public virtual DateTime? ActivationDate { get; set; }
 
-        public int SentCount { get; set; }
+        public virtual int SentCount { get; set; }
 
-        public int State { get; set; }
+        public virtual int State { get; set; }
 
-        public DateTime CreateDate { get; set; }
+        public virtual DateTime CreateDate { get; set; }
 
-        public DateTime? CountExpiredDate { get; set; }
+        public virtual DateTime? CountExpiredDate { get; set; }
 
-        public int MessageUnitType { get; set; }
+        public virtual int MessageUnitType { get; set; }
 
-        public int Type { get; set; }
+        public virtual int Type { get; set; }
     }
 }

@@ -12,9 +12,6 @@ namespace Transcrypt.Domain.Entities
 
             Id(x => x.Id).GeneratedBy.Guid();
 
-            Map(x => x.DocumentId);
-            Map(x => x.SenderId);
-            Map(x => x.ReceiverId);
             Map(x => x.SenderIsOperator);
             Map(x => x.ReceiverIsOperator);
             Map(x => x.CreateDate);

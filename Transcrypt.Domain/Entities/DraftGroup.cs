@@ -5,39 +5,39 @@ namespace Transcrypt.Domain.Entities
 {
     public class DraftGroup
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public DateTime CreateDateTime { get; set; }
+        public virtual DateTime CreateDateTime { get; set; }
 
-        public DateTime UpdateDateTime { get; set; }
+        public virtual DateTime UpdateDateTime { get; set; }
 
-        public Guid SenderId { get; set; }
+        public virtual Guid SenderId { get; set; }
 
-        public Guid? ReceiverId { get; set; }
+        public virtual Guid? ReceiverId { get; set; }
 
-        public Guid? PrimarySenderDepartmentId { get; set; }
+        public virtual Guid? PrimarySenderDepartmentId { get; set; }
 
-        public Guid? PrimaryReceiverDepartmentId { get; set; }
+        public virtual Guid? PrimaryReceiverDepartmentId { get; set; }
 
-        public bool IsAutosaved { get; set; }
+        public virtual bool IsAutosaved { get; set; }
 
-        public Guid? EmployeeId { get; set; }
+        public virtual Guid? EmployeeId { get; set; }
         
         //[Association(ThisKey = "SenderId", OtherKey = "Id")]
-        public Client Sender { get; set; }
+        public virtual Client Sender { get; set; }
         
         //[Association(ThisKey = "ReceiverId", OtherKey = "Id")]
-        public Client Receiver { get; set; }
+        public virtual Client Receiver { get; set; }
         
         //[Association(ThisKey = "PrimarySenderDepartmentId", OtherKey = "Id")]
-        public Department PrimarySenderDepartment { get; set; }
+        public virtual Department PrimarySenderDepartment { get; set; }
         
         //[Association(ThisKey = "PrimaryReceiverDepartmentId", OtherKey = "Id")]
-        public Department PrimaryReceiverDepartment { get; set; }
+        public virtual Department PrimaryReceiverDepartment { get; set; }
         
         //[Association(ThisKey = "Id", OtherKey = "GroupId")]
-        public IEnumerable<Draft> Drafts { get; set; }
+        public virtual IEnumerable<Draft> Drafts { get; set; }
 
-        public bool Sent { get; set; }
+        public virtual bool Sent { get; set; }
     }
 }

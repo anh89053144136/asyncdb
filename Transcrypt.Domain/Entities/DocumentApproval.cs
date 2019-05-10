@@ -4,9 +4,9 @@ namespace Transcrypt.Domain.Entities
 {
     public class DocumentApproval
     {
-        public Guid Id { get; set; }
-        public Guid ApprovalPackageId { get; set; }
-        public Guid? DraftId { get; set; }
-        public Guid? DocumentId { get; set; }
+        public virtual Guid Id { get; set; }
+        public virtual Guid ApprovalPackageId { get; set; }
+        public virtual Guid? DraftId { get; set; }
+        public virtual Guid? DocumentId { get; set; }
     }
 }

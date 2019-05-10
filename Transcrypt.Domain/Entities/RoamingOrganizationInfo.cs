@@ -4,8 +4,8 @@ namespace Transcrypt.Domain.Entities
 {
 	public class RoamingOrganizationInfo
 	{
-		public Guid OrganizationId { get; set; }
+		public virtual Guid OrganizationId { get; set; }
 
-		public int Mode { get; set; }
+		public virtual int Mode { get; set; }
 	}
 }

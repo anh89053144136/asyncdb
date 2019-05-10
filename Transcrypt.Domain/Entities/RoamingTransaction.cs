@@ -4,14 +4,14 @@ namespace Transcrypt.Domain.Entities
 {
 	public class RoamingTransaction
 	{
-		public Guid TransactionId { get; set; }
+		public virtual Guid TransactionId { get; set; }
 
-		public int State { get; set; }
+		public virtual int State { get; set; }
 
-		public bool WithParentDocument { get; set; }
+		public virtual bool WithParentDocument { get; set; }
 
-		public string Description { get; set; }
+		public virtual string Description { get; set; }
 
-		public int RoamingMode { get; set; }
+		public virtual int RoamingMode { get; set; }
 	}
 }

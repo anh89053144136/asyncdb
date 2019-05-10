@@ -7,7 +7,7 @@ namespace Transcrypt.Domain.Entities
     {
         public NotificationMap()
         {
-            Table("Signatures");
+            Table("Notifications");
 
             Id(x => x.Id).GeneratedBy.Guid();
 

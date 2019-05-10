@@ -4,11 +4,11 @@ namespace Transcrypt.Domain.Entities
 {
 	public class ClientJur
 	{
-		public Guid Id { get; set; }
-		public string FullName { get; set; }
-		public string ShortName { get; set; }
-		public string Inn { get; set; }
-		public string Kpp { get; set; }
-		public string Ogrn { get; set; }
+		public virtual Guid Id { get; set; }
+		public virtual string FullName { get; set; }
+		public virtual string ShortName { get; set; }
+		public virtual string Inn { get; set; }
+		public virtual string Kpp { get; set; }
+		public virtual string Ogrn { get; set; }
 	}
 }

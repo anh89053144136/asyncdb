@@ -3,7 +3,7 @@ namespace Transcrypt.Domain.Entities
 {
     public class Settings20
     {
-        public string Name { get; set; }
-        public string Value { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Value { get; set; }
     }
 }

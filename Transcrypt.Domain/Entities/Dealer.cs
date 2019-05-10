@@ -4,14 +4,14 @@ namespace Transcrypt.Domain.Entities
 {
     public class Dealer
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public Guid OperatorId { get; set; }
+        public virtual Guid OperatorId { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public string Code { get; set; }
+        public virtual string Code { get; set; }
 
-        public int State { get; set; }
+        public virtual int State { get; set; }
     }
 }

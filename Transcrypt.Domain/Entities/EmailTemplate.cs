@@ -2,10 +2,10 @@
 {
 	public class EmailTemplate
 	{
-		public int EmailType { get; set; }
+		public virtual int EmailType { get; set; }
 
-		public string Message { get; set; }
+		public virtual string Message { get; set; }
 
-		public string Subject { get; set; }
+		public virtual string Subject { get; set; }
 	}
 }

@@ -6,7 +6,7 @@ namespace Transcrypt.Domain.Entities
     {
         public CountryMap()
         {
-            Table("Signatures");
+            Table("Countrys");
 
             Id(x => x.Guid).GeneratedBy.Guid();
 

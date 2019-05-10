@@ -4,13 +4,13 @@ namespace Transcrypt.Domain.Entities
 {
 	public class Notification
 	{
-		public Guid Id { get; set; }
-		public Guid OrganizationId { get; set; }
-		public Guid? DepartmentId { get; set; }
-		public Guid? EmployeeId { get; set; }
-		public Guid? ReferenceId { get; set; }
-		public DateTime Date { get; set; }
-		public int State { get; set; }
-		public int Type { get; set; }
+		public virtual Guid Id { get; set; }
+		public virtual Guid OrganizationId { get; set; }
+		public virtual Guid? DepartmentId { get; set; }
+		public virtual Guid? EmployeeId { get; set; }
+		public virtual Guid? ReferenceId { get; set; }
+		public virtual DateTime Date { get; set; }
+		public virtual int State { get; set; }
+		public virtual int Type { get; set; }
 	}
 }

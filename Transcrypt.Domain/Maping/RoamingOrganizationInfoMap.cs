@@ -9,7 +9,7 @@ namespace Transcrypt.Domain.Entities
         {
             Table("RoamingOrganizationInfos");
 
-            Map(x => x.OrganizationId);
+            Id(x => x.OrganizationId);
             Map(x => x.Mode);
         }
 	}

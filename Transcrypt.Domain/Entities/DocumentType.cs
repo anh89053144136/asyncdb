@@ -2,14 +2,14 @@
 {
     public class DocumentType
     {
-        public int Code { get; set; }
+        public virtual int Code { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public string ShortName { get; set; }
+        public virtual string ShortName { get; set; }
 
-        public string FileNamePattern { get; set; }
+        public virtual string FileNamePattern { get; set; }
 
-        public string TypeNamePattern { get; set; }
+        public virtual string TypeNamePattern { get; set; }
     }
 }

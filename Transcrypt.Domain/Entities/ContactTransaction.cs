@@ -4,20 +4,20 @@ namespace Transcrypt.Domain.Entities
 {
     public class ContactTransaction
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public int PreviousState { get; set; }
+        public virtual int PreviousState { get; set; }
 
-        public int CurrentState { get; set; }
+        public virtual int CurrentState { get; set; }
 
-        public Guid ContactId { get; set; }
+        public virtual Guid ContactId { get; set; }
 
-        public Guid EmployeeId { get; set; }
+        public virtual Guid EmployeeId { get; set; }
 
-        public DateTime CreateDateTime { get; set; }
+        public virtual DateTime CreateDateTime { get; set; }
 
-        public Guid ClientChangeId { get; set; }
+        public virtual Guid ClientChangeId { get; set; }
 
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
     }
 }

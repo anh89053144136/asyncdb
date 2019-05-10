@@ -4,16 +4,16 @@ namespace Transcrypt.Domain.Entities
 {
 	public class BetaFeedBack
 	{
-		public Guid Id { get; set; }
+		public virtual Guid Id { get; set; }
 
-		public string Comment { get; set; }
+		public virtual string Comment { get; set; }
 
-		public string Choice { get; set; }
+		public virtual string Choice { get; set; }
 
-		public Guid EmployeeId { get; set; }
+		public virtual Guid EmployeeId { get; set; }
 
-		public string Email { get; set; }
+		public virtual string Email { get; set; }
 
-		public DateTime? CreationDate { get; set; }
+		public virtual DateTime? CreationDate { get; set; }
 	}
 }

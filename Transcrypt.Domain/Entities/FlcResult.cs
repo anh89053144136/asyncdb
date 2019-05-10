@@ -4,12 +4,12 @@ namespace Transcrypt.Domain.Entities
 {
     public class FlcResult
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public string Filename { get; set; }
+        public virtual string Filename { get; set; }
 
-        public int FileType { get; set; }
+        public virtual int FileType { get; set; }
 
-        public string Result { get; set; }
+        public virtual string Result { get; set; }
     }
 }

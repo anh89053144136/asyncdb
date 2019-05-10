@@ -4,10 +4,10 @@ namespace Transcrypt.Domain.Entities
 {
 	public class User
 	{
-		public Guid Id { get; set; }
+		public virtual Guid Id { get; set; }
 
-		public string Login { get; set; }
+		public virtual string Login { get; set; }
 
-		public string Password { get; set; }
+		public virtual string Password { get; set; }
 	}
 }

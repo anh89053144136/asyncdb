@@ -4,44 +4,44 @@ namespace Transcrypt.Domain.Entities
 {
     public class Draft
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
-        public int DocflowTypeCode { get; set; }
+        public virtual int DocflowTypeCode { get; set; }
 
-        public Guid GroupId { get; set; }
+        public virtual Guid GroupId { get; set; }
 
-        public string UnformalizedDocumentType { get; set; }
+        public virtual string UnformalizedDocumentType { get; set; }
 
-        public Guid? SenderDepartmentId { get; set; }
+        public virtual Guid? SenderDepartmentId { get; set; }
 
-        public bool NeedResign { get; set; }
+        public virtual bool NeedResign { get; set; }
 
-        public string FileName { get; set; }
+        public virtual string FileName { get; set; }
 
-        public int DraftState { get; set; }
+        public virtual int DraftState { get; set; }
 
-        public DateTime UpdateDateTime { get; set; }
+        public virtual DateTime UpdateDateTime { get; set; }
 
-        public Guid? ReceiverDepartmentId { get; set; }
+        public virtual Guid? ReceiverDepartmentId { get; set; }
 
-        public int? InvoiceType { get; set; }
+        public virtual int? InvoiceType { get; set; }
 
-        public bool IsEncrypted { get; set; }
+        public virtual bool IsEncrypted { get; set; }
         
         //[Association(ThisKey = "GroupId", OtherKey = "Id")]
-        public DraftGroup DraftGroup { get; set; }
+        public virtual DraftGroup DraftGroup { get; set; }
         
         //[Association(ThisKey = "SenderDepartmentId", OtherKey = "Id")]
-        public Department SenderDepartment { get; set; }
+        public virtual Department SenderDepartment { get; set; }
         
         //[Association(ThisKey = "ReceiverDepartmentId", OtherKey = "Id")]
-        public Department ReceiverDepartment { get; set; }
+        public virtual Department ReceiverDepartment { get; set; }
         
         //[Association(ThisKey = "Id", OtherKey = "Id")]
-        public FileContent FileContent { get; set; }
+        public virtual FileContent FileContent { get; set; }
     }
 }

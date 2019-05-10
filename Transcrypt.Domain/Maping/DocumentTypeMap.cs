@@ -6,7 +6,7 @@ namespace Transcrypt.Domain.Entities
     {
         public DocumentTypeMap()
         {
-            Table("DocumentTypes");
+            Table("DicDocumentTypes");
 
             Id(x => x.Code);
 

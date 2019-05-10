@@ -18,7 +18,7 @@ namespace Transcrypt.Domain.Entities
             Map(x => x.Post);
             Map(x => x.Fio);
 
-            References(x => x.Cert).Column("Id");
+            //References(x => x.Cert).Column("Id");
         }
     }
 }

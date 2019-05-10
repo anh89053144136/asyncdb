@@ -9,8 +9,9 @@ namespace Transcrypt.Domain.Entities
         {
             Table("EmployeeShelfAccesss");
 
-            Map(x => x.EmployeeId);
-            Map(x => x.DataStorageId);
+            CompositeId()
+              .KeyProperty(x => x.EmployeeId)
+              .KeyProperty(x => x.DataStorageId);
         }
     }
 }

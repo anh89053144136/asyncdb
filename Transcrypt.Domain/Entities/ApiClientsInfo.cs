@@ -4,17 +4,17 @@ namespace Transcrypt.Domain.Entities
 {
     public class ApiClientsInfo
     {
-        public Guid ClientId { get; set; }
+        public virtual Guid ClientId { get; set; }
 
-        public DateTime RegistrationDateTime { get; set; }
+        public virtual DateTime RegistrationDateTime { get; set; }
 
-        public string Settings { get; set; }
+        public virtual string Settings { get; set; }
 
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
-        public Guid ProgramInfoId { get; set; }
+        public virtual Guid ProgramInfoId { get; set; }
         
         //[Association(ThisKey = "ProgramInfoId", OtherKey = "Id")]
-        public ProgramInfo ProgramInfo { get; set; }
+        public virtual ProgramInfo ProgramInfo { get; set; }
     }
 }

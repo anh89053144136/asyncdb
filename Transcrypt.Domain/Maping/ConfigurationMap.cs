@@ -9,8 +9,9 @@ namespace Transcrypt.Domain.Entities
         {
             Table("Configurations");
 
-            Map(x => x.Name);
-            Map(x => x.Value);
+            CompositeId()
+              .KeyProperty(x => x.Name)
+              .KeyProperty(x => x.Value);
         }
     }
 }

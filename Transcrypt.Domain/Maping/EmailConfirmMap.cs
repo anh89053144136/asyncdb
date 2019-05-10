@@ -9,10 +9,9 @@ namespace Transcrypt.Domain.Entities
         {
             Table("EmailConfirms");
 
+            Id(x => x.Email);
+
             Map(x => x.Secret);
-            Map(x => x.Email);
-            Map(x => x.UserId);
-            Map(x => x.EmployeeId);
             Map(x => x.Date);
             Map(x => x.State);
 

@@ -9,10 +9,10 @@ namespace Transcrypt.Domain.Entities
         {
             Table("ApiClients2Document");
 
-            Id(x => new { x.DocumentId, x.SenderProgramInstanceId });
+            CompositeId()
+              .KeyProperty(x => x.DocumentId)
+              .KeyProperty(x => x.SenderProgramInstanceId);
 
-            Map(x => x.SenderProgramInstanceId);
-            Map(x => x.DocumentId);
             Map(x => x.IsContainsChanges);
         }
     }

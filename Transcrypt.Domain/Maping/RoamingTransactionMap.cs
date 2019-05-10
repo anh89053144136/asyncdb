@@ -9,7 +9,8 @@ namespace Transcrypt.Domain.Entities
         {
             Table("RoamingTransactions");
 
-            Map(x => x.TransactionId);
+            Id(x => x.TransactionId);
+
             Map(x => x.State);
             Map(x => x.WithParentDocument);
             Map(x => x.Description);

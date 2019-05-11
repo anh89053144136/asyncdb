@@ -24,16 +24,6 @@ namespace Transcrypt.Incoming.Controllers
             Guid clientId = new Guid("43B70443-D84E-4BDA-8042-27B6C1CAC17D"); // точка зрения
 //documentsQuery
             var result =   (from dbDocument in dbContext.Documents
-                            //where groupIds.Contains(dbDocument.GroupId)
-                            //join empDoc in db.EmployeeDocuments on new { documentId = dbDocument.Id, employeeId } equals new
-                            //{
-                            //    documentId = empDoc.DocumentId,
-                            //    employeeId = empDoc.EmployeeId
-                            //} into empLj
-                            //from empDoc in empLj.DefaultIfEmpty()
-                            
-                            //join dbSender in db.Clients on dbDocument.SenderId equals dbSender.Id
-                            //join op in db.Operators on dbSender.OperatorId equals op.Id
                             select new 
                             {
                                 dbDocument.Id,
@@ -64,28 +54,37 @@ namespace Transcrypt.Incoming.Controllers
                                         Id = dbDocument.ReceiverDepartment.Id,
                                         dbDocument.ReceiverDepartment.Name
                                     },
-                                //IsReaded = empDoc != null ? !empDoc.NotReaded : false,
+                                IsReaded = dbContext.EmployeeDocuments.Any(ed => ed.Document.Id == dbDocument.Id && ed.Employee.Id == employeeId) ? 
+                                            !dbContext.EmployeeDocuments.Where(ed => ed.Document.Id == dbDocument.Id && ed.Employee.Id == employeeId).Select(ed => ed.NotReaded).FirstOrDefault() : false,
                                 NeedResign = dbDocument.NeedResign,
-                                //IsApprovalParticipant = dbContext.InternalDocflowPackages
-                                //.Where(p => p.Sender.ClientId == employeeId)
-                                //.Any(p =>
-                                //        // пакет согласования
-                                //        p.ApprovalPackage != null
-                                //        && p.ApprovalPackage.DocumentApprovals.Any(da =>
-                                //            da.DocumentId != null && da.DocumentId == dbDocument.Id ||
-                                //            da.DraftId != null && da.DraftId == dbDocument.Id)
-                                //        // пакет исходящих документов на подпись
-                                //        || (p.OutcomingPackageForSigning != null
-                                //            && p.OutcomingPackageForSigning.DocumentsGroupId != null
-                                //            && p.OutcomingPackageForSigning.DocumentsGroup.Documents.Any(doc => doc.Id == dbDocument.Id)
-                                //            || p.OutcomingPackageForSigning.DraftsGroupId != null
-                                //            && p.OutcomingPackageForSigning.DraftsGroup.Drafts.Any(draft => draft.Id == dbDocument.Id))
-                                //        // пакет входящего документа на подпись
-                                //        || p.IncomingPackageForSigning != null
-                                //        && p.IncomingPackageForSigning.DocumentId == dbDocument.Id)
+                                IsApprovalParticipant = dbContext.InternalDocflowPackages
+                                .Where(p => p.Sender.Client.Id == employeeId)
+                                .Any(p =>
+                                        // пакет согласования
+                                        //p.ApprovalPackage != null
+                                        //&& p.ApprovalPackage.DocumentApprovals.Any(da =>
+                                        //    da.DocumentId != null && da.DocumentId == dbDocument.Id ||
+                                        //    da.DraftId != null && da.DraftId == dbDocument.Id)
+                                        //// пакет исходящих документов на подпись
+                                        /*||*/ 
+                                            (from opfs in dbContext.OutcomingPackageForSignings
+                                             where opfs.Id == p.Id &&
+                                                    dbContext.Documents.Any(d => d.Group.Id == opfs.DocumentsGroup.Id)
+                                             select opfs.Id
+                                            ).Any()
+                                        //||
+                                            //(from opfs in dbContext.OutcomingPackageForSignings
+                                            // where opfs.Id == p.Id &&
+                                            //        dbContext.Drafts.Any(d => d.DraftGroup.Id == opfs.DraftsGroup.Id)
+                                            // select opfs.Id
+                                            //).Any()
+                                        // пакет входящего документа на подпись
+                                        || dbContext.IncomingPackagesForSignings.Any(ipfs => 
+                                            ipfs.Document.Id == dbDocument.Id &&
+                                            ipfs.Id == p.Id))
                             })
-                            .Skip((page - 1) * 20)
-                            .Take(20)
+                            .Skip((page - 1) * 10)
+                            .Take(10)
                             .ToArray();
 
             return result;

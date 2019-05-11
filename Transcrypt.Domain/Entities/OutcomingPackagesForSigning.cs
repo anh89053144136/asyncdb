@@ -5,9 +5,6 @@ namespace Transcrypt.Domain.Entities
     public class OutcomingPackagesForSigning
     {
         public virtual Guid Id { get; set; }
-        public virtual Guid? DocumentsGroupId { get; set; }
-
-        public virtual Guid? DraftsGroupId { get; set; }
 
         /// <summary>
 		/// Группа черновиков

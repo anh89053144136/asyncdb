@@ -24,11 +24,7 @@ namespace Transcrypt.Domain.Entities
 
 		public virtual bool IsAccessForLogin {get;set;}
 
-		public virtual Guid? UserId {get;set;}
-
 		public virtual int State {get;set;}
-
-		public virtual Guid ClientId {get;set;}
 
 		public virtual int DealerPersonId {get;set;}
 

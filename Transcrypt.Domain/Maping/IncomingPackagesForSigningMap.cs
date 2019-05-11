@@ -7,11 +7,11 @@ namespace Transcrypt.Domain.Entities
     {
         public IncomingPackagesForSigningMap()
         {
-            Table("IncomingPackagesForSignings");
+            Table("IncomingPackagesForSigning");
 
-            Id(x => x.Id);//.GeneratedBy.Guid();
+            Id(x => x.Id).GeneratedBy.Guid();
 
-            Map(x => x.DocumentId);
+            References(x => x.Document).Column("DocumentId");
         }
     }
 }

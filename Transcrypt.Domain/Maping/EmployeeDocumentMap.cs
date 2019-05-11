@@ -7,18 +7,14 @@ namespace Transcrypt.Domain.Entities
     {
         public EmployeeDocumentMap()
         {
-            Table("EmployeeDocuments");
+            Table("EmployeeDocumentInfos");
 
             CompositeId()
-              .KeyProperty(x => x.DocumentId)
-              .KeyProperty(x => x.EmployeeId);
+              .KeyReference(x => x.Document, "DocumentId")
+              .KeyReference(x => x.Employee, "EmployeeId");
 
-            Map(x => x.IsImportant);
-            Map(x => x.NotReaded);
-
-            //References(x => x.Document).Column("DocumentId");
-            //References(x => x.Employee).Column("EmployeeId");
-            //References(x => x.FileContent).Column("DocumentId");
+            Map(x => x.IsImportant).Column("IsImportant");
+            Map(x => x.NotReaded).Column("IsNew");
         }
     }
 }

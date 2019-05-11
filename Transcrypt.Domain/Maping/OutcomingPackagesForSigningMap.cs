@@ -7,7 +7,7 @@ namespace Transcrypt.Domain.Entities
     {
         public OutcomingPackagesForSigningMap()
         {
-            Table("OutcomingPackagesForSignings");
+            Table("OutcomingPackagesForSigning");
 
             Id(x => x.Id).GeneratedBy.Guid();
 

@@ -29,7 +29,7 @@ namespace Transcrypt.Domain
              .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connectionString))
              .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHibernate.Cfg.Mappings>())
              .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DBContext>())
-             //.ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true))
+             //.ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true)) // если нужно создать БД с нуля
              .BuildSessionFactory();
         }
 
@@ -80,6 +80,38 @@ namespace Transcrypt.Domain
             get
             {
                 return session.Query<Operator>();
+            }
+        }
+
+        public IQueryable<IncomingPackagesForSigning> IncomingPackagesForSignings
+        {
+            get
+            {
+                return session.Query<IncomingPackagesForSigning>();
+            }
+        }
+
+        public IQueryable<OutcomingPackagesForSigning> OutcomingPackageForSignings
+        {
+            get
+            {
+                return session.Query<OutcomingPackagesForSigning>();
+            }
+        }
+        
+        public IQueryable<Draft> Drafts
+        {
+            get
+            {
+                return session.Query<Draft>();
+            }
+        }
+
+        public IQueryable<DocumentGroup> DocumentGroups
+        {
+            get
+            {
+                return session.Query<DocumentGroup>();
             }
         }
 

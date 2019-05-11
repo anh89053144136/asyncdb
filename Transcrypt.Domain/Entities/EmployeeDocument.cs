@@ -4,18 +4,12 @@ namespace Transcrypt.Domain.Entities
 {
     public class EmployeeDocument
     {
-        public virtual Guid DocumentId { get; set; }
-
-        public virtual Guid EmployeeId { get; set; }
-
         public virtual bool IsImportant { get; set; }
 
         public virtual bool NotReaded { get; set; }
         
-        //[Association(ThisKey = "DocumentId", OtherKey = "Id")]
         public virtual Document Document { get; set; }
         
-        //[Association(ThisKey = "EmployeeId", OtherKey = "Id")]
         public virtual Employee Employee { get; set; }
 
         public override bool Equals(object obj)
@@ -25,8 +19,8 @@ namespace Transcrypt.Domain.Entities
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
 
-            return this.DocumentId == other.DocumentId &&
-                this.EmployeeId == other.EmployeeId;
+            return this.Document.Id == other.Document.Id &&
+                this.Employee.Id == other.Employee.Id;
         }
 
         public override int GetHashCode()
@@ -34,8 +28,8 @@ namespace Transcrypt.Domain.Entities
             unchecked
             {
                 int hash = GetType().GetHashCode();
-                hash = (hash * 31) ^ DocumentId.GetHashCode();
-                hash = (hash * 31) ^ EmployeeId.GetHashCode();
+                hash = (hash * 31) ^ Document.Id.GetHashCode();
+                hash = (hash * 31) ^ Employee.Id.GetHashCode();
 
                 return hash;
             }

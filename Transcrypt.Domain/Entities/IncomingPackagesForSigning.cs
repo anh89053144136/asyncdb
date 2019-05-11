@@ -6,6 +6,6 @@ namespace Transcrypt.Domain.Entities
     {
         public virtual Guid Id { get; set; }
 
-        public virtual Guid DocumentId { get; set; }
+        public virtual Document Document { get; set; }
     }
 }
